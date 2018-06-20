@@ -1,0 +1,8 @@
+/* pages/list/list.wxss */
+@import "../common/lib/weui.wxss";
+.btn-other{
+  margin-top: 10px;
+}
+.hide-input{
+  display: none;
+}
