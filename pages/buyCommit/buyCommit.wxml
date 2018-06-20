@@ -5,7 +5,7 @@
         <view class="weui-label">物品名称</view>
         </view>
         <view class="weui-cell__bd">
-        <input class="weui-input" type="text" name="BuyName"></input>
+        <input class="weui-input" type="text" name="BuyName" value="{{formData.BuyName}}"></input>
         <input class="weui-input" class='hide-input' type="text" name="imei" value='1'></input>
         </view>
     </view>
@@ -15,7 +15,7 @@
         <view class="weui-label">物品价格</view>
         </view>
         <view class="weui-cell__bd">
-        <input class="weui-input" type="number" name="BuyPrice"></input>
+        <input class="weui-input" type="digit" name="BuyPrice" value="{{formData.BuyPrice}}"></input>
         </view>
     </view>
 
@@ -24,7 +24,7 @@
         <view class="weui-label">购买地址</view>
         </view>
         <view class="weui-cell__bd">
-        <input class="weui-input" type="text"  name="BuyUrl"></input>
+        <input class="weui-input" type="text"  name="BuyUrl" value="{{formData.BuyUrl}}"></input>
         </view>
     </view>
 
@@ -34,7 +34,7 @@
         </view>
         <view class="weui-cell__bd">
         <picker mode = "selector" bindchange="bindTypeChange" range-key="TypeName" range="{{arrType}}" value="{{typeIndex}}">
-            <input class="weui-input" name="BuyTypeName" type="text" disabled="{{true}}" value="{{arrType[typeIndex].TypeName}}"></input>
+            <input class="weui-input" name="BuyTypeName" type="text" disabled="{{true}}" value="{{BuyType}}"></input>
         </picker>
         </view>
     </view>
@@ -44,7 +44,7 @@
         </view>
         <view class="weui-cell__bd">
         <picker bindchange="bindLevelChange" range-key="BuyLevel" range="{{arrLevel}}" value="{{levelIndex}}">
-            <input class="weui-input" name="BuyLevel" type="text" disabled="{{true}}"  value="{{arrLevel[levelIndex].BuyLevel}}"></input>
+            <input class="weui-input" name="BuyLevel" type="text" disabled="{{true}}"  value="{{BuyLevel}}"></input>
         </picker>
         </view>
     </view>
@@ -53,8 +53,8 @@
         <view class="weui-label">审核人</view>
         </view>
         <view class="weui-cell__bd">
-        <picker bindchange="bindLevelChange" range-key="UserName" range="{{arrPerson}}" value="{{personIndex}}">
-            <input class="weui-input" name="BuyCheckPerson" type="text" disabled="{{true}}"  value="{{arrPerson[personIndex].UserName}}"></input>
+        <picker bindchange="bindPersonChange" range-key="UserName" range="{{arrPerson}}" value="{{personIndex}}">
+            <input class="weui-input" name="BuyCheckPerson" type="text" disabled="{{true}}"  value="{{BuyPerson}}"></input>
         </picker>
         </view>
     </view>
@@ -73,11 +73,13 @@
         <view class="weui-label">描述</view>
         </view>
         <view class="weui-cell__bd">
-        <input class="weui-input" type="text" name="BuyDesc"></input>
+        <input class="weui-input" type="text" name="BuyDesc" value="{{formData.BuyDesc}}"></input>
         </view>
     </view>
     </view>
     <view class='button-group btn-area'>
-        <button bindtap='bindAgree' form-type="submit" type="primary">提交</button>
+        <button class="{{BtnCommit?'btn-show':'btn-hide'}}" bindtap='bindAgree'  form-type="submit" type="primary">提交</button>
+        <button class="{{BtnSave?'btn-show':'btn-hide'}}" bindtap='bindSave' type="primary">完成购买</button>
+        <button class="{{BtnGiveup?'btn-show':'btn-hide'}}" bindtap='bindGiveup' type="warn">放弃购买</button>
     </view>
 </form>

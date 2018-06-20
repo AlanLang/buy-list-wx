@@ -1,0 +1,9 @@
+@import "../common/index.wxss";
+@import "../common/lib/weui.wxss";
+.kind-list{
+  border: 1px;
+}
+.btn-commit{
+  margin: 20px;
+  margin-top: 40px;
+}

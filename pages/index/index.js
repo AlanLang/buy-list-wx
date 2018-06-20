@@ -18,7 +18,7 @@ Page({
   bingViewCommit:function(){
     if (this.data.hasUserInfo){
       wx.navigateTo({
-        url: '../buyCommit/buyCommit'
+        url: '../buyList/buyList'
       })
     }else{
       wx.showModal({

@@ -6,3 +6,9 @@
 .hide-input{
   display: none;
 }
+.btn-hide{
+  display: none;
+}
+.btn-show{
+  display: block;
+}

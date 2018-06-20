@@ -1,0 +1,14 @@
+<view class="index">
+  <view class="index-hd">
+    <view class="index-desc">广告位招租</view>
+  </view>
+  <view class="kind-list weui-cells">
+    <block wx:for-items="{{formData}}" wx:for-item="item" wx:key="*item">
+      <navigator class="navigator" url='../buyCommit/buyCommit?id={{item.ID}}'>
+        <view class="navigator-text">{{item.BuyName}}-{{buyStatus[item.BuyState]}}</view>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<button bindtap='bindAdd' class="btn-commit"  type="primary">新增</button>
