@@ -32,9 +32,7 @@ Page({
         user: user
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT  
-      // header: { }, // 设置请求的 header  
       success: function (res) {
-        // success  
         console.log(res)
         if (res.data.code == 0){
           that.setData({

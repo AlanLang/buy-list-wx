@@ -1,8 +1,5 @@
 /* pages/list/list.wxss */
 @import "../common/lib/weui.wxss";
-.button-group{
-  margin: 20px;  
-}
 .btn-other{
   margin-top: 10px;
 }

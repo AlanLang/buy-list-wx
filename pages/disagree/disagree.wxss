@@ -1,0 +1,5 @@
+@import "../common/index.wxss";
+@import "../common/lib/weui.wxss";
+.btn-commit{
+  margin-top: 50px;
+}

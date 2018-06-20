@@ -16,12 +16,6 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
-}
-.button-group{
-  margin-top: 150px;
-}
 .button-one{
   margin-top: 20px;
 }

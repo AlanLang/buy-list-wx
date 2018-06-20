@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/list/list",
-    "pages/buyGroup/buyGroup"
+    "pages/buyGroup/buyGroup",
+    "pages/disagree/disagree"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "演示",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
   }
 }

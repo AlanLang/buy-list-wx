@@ -1,0 +1,15 @@
+<view class="index">
+  <view class="index-hd">
+    <view class="index-desc">请填写拒绝理由,点击提交按钮完成提交。</view>
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <form bindsubmit="commentSubmit">
+          <view class="kind-list-item">
+              <textarea placeholder="请填写拒绝理由" name="content" />
+          </view>
+          <button class="btn-commit" form-type="submit" type="primary">提交</button>
+      </form>
+    </view>
+  </view>
+</view>
