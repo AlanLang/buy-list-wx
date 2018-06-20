@@ -1,0 +1,5 @@
+@import "../common/index.wxss";
+@import "../common/lib/weui.wxss";
+.kind-list{
+  border: 1px;
+}

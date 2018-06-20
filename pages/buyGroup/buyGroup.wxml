@@ -1,0 +1,10 @@
+<view class="index">
+  <view class="kind-list weui-cells">
+    <block wx:for-items="{{formData}}" wx:for-item="item" wx:key="*item">
+      <navigator class="navigator" url='../list/list?id={{item.ID}}'>
+        <view class="navigator-text">{{item.BuyName}}-{{item.BuyAuthor}}</view>
+        <view class="navigator-arrow"></view>
+      </navigator>
+    </block>
+  </view>
+</view>
