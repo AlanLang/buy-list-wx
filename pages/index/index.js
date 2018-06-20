@@ -16,15 +16,20 @@ Page({
     })
   },
   bingViewCommit:function(){
-    wx.showModal({
-      title: "提示",
-      content: "功能开发中，敬请期待。",
-      showCancel: false,
-      confirmText: "确定"
-    })
+    if (this.data.hasUserInfo){
+      wx.navigateTo({
+        url: '../buyCommit/buyCommit'
+      })
+    }else{
+      wx.showModal({
+        title: "提示",
+        content: "请先进行登录",
+        showCancel: false,
+        confirmText: "确定"
+      })
+    }
   },
   bindViewList:function(){
-    console.log(this)
     if (this.data.hasUserInfo){
       wx.navigateTo({
         url: '../buyGroup/buyGroup'

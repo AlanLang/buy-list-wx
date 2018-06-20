@@ -1,0 +1,75 @@
+<form bindsubmit="commentSubmit">
+    <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">物品名称</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyName}}"></input>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">物品价格</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyPrice}}"></input>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">购买地址</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyUrl}}"></input>
+        </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">物品类别</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyTypeName}}"></input>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">需求等级</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyLevel}}"></input>
+        </view>
+    </view>
+        <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">审核人</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyCheckPerson}}"></input>
+        </view>
+    </view>
+        <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">提交时间</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyTime}}"></input>
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+        <view class="weui-label">描述</view>
+        </view>
+        <view class="weui-cell__bd">
+        <input class="weui-input" type="text"  value="{{formData.BuyDesc}}"></input>
+        </view>
+    </view>
+    </view>
+    <view class='button-group btn-area'>
+        <button bindtap='bindAgree'  type="primary">同意</button>
+        <button bindtap='bindDisagree' class='btn-other'  type="warn">不同意</button>
+    </view>
+</form>

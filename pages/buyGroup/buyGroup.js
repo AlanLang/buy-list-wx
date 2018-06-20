@@ -16,7 +16,6 @@ Page({
       list: list
     });
   },
-
   onLoad:function(){
     let that = this
     wx.showToast({

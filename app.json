@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/list/list",
     "pages/buyGroup/buyGroup",
-    "pages/disagree/disagree"
+    "pages/disagree/disagree",
+    "pages/buyCommit/buyCommit"
   ],
   "window":{
     "navigationBarTextStyle": "black",

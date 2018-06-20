@@ -28,7 +28,6 @@ Page({
           icon: "loading",
           duration: 10000
         })
-
         wx.request({
           url: 'https://www.langwenda.cn/api/BuyCheckCommit',
           data: data,
