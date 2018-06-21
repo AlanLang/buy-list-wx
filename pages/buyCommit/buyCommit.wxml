@@ -76,6 +76,14 @@
         <input class="weui-input" type="text" name="BuyDesc" value="{{formData.BuyDesc}}"></input>
         </view>
     </view>
+    <view class="{{shouBack?'weui-cell weui-cell_input':'btn-hide'}}">
+        <view class="weui-cell__hd">
+            <view class="weui-label">反馈</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input class="weui-input" type="text" name="BuyDesc" value="{{BackMsg}}"></input>
+        </view>
+    </view>
     </view>
     <view class='button-group btn-area'>
         <button class="{{BtnCommit?'btn-show':'btn-hide'}}" bindtap='bindAgree'  form-type="submit" type="primary">提交</button>

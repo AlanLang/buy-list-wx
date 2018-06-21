@@ -13,7 +13,8 @@ Page({
     BuyTime:'',
     BtnCommit:true,
     BtnGiveup:false,
-    BtnSave:false
+    BtnSave:false,
+    shouBack:false
   },bindTypeChange:function(e){
     this.setData({
       BuyType: this.data.arrType[e.detail.value].TypeName
@@ -318,6 +319,33 @@ Page({
             BtnCommit: false,
             BtnGiveup: true,
             BtnSave:true
+          })
+        }
+        if(buyItem.BuyState == 2){
+          wx.request({
+            url: 'https://www.langwenda.cn/api/GetCheckMsg',
+            data:{imei:0,id:that.data.ID},
+            method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT  
+            success: function (res) {
+              console.log(res)
+              if (res.data.code == 0){
+                that.setData({
+                  BackMsg : res.data.data.LogMsg,
+                  shouBack:true
+                })
+              }else{
+                wx.showModal({
+                  title: "提示",
+                  content: res.data.err,
+                  showCancel: false,
+                  confirmText: "确定"
+                })
+              }
+              wx.hideToast()
+            },
+            complete: function () {
+              // complete  
+            }
           })
         }
       }else{
